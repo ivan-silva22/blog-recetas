@@ -1,13 +1,13 @@
 import { Container, Row } from "react-bootstrap";
-import CardProducto from "./CardProducto";
+import CardProducto from "./CardReseta";
 
 const Inicio = () => {
     return (
         <section className="mainSection">
         <img
           className="banner"
-          src="https://images.pexels.com/photos/6802983/pexels-photo-6802983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="fondo cafe"
+          src="https://fondosmil.com/fondo/35733.jpg"
+          alt="fondo"
         />
         <Container>
           <h1 className="display-4">Recetas de cocina</h1>

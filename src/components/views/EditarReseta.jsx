@@ -1,19 +1,18 @@
 import { Form, Button } from "react-bootstrap";
 
-const CrearProducto = () => {
+const EditarReseta = () => {
   
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5">Nueva receta</h1>
+      <h1 className="display-4 mt-5">Editar receta</h1>
       <hr />
       <Form >
-        <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label>receta*</Form.Label>
+        <Form.Group className="mb-3" controlId="formNombreReceta">
+          <Form.Label>Receta*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: Pizza"
           />
-         
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
           <Form.Label>Imagen URL*</Form.Label>
@@ -44,4 +43,4 @@ const CrearProducto = () => {
   );
 };
 
-export default CrearProducto;
+export default EditarReseta;

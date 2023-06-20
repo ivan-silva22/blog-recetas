@@ -1,6 +1,6 @@
 import { Col, Card, Button } from "react-bootstrap";
 
-const CardProducto = () => {
+const CardReseta = () => {
   return (
     <Col md={4} ld={3} className="mb-3">
       <Card>
@@ -10,11 +10,11 @@ const CardProducto = () => {
         />
         <Card.Body>
           <Card.Title>Receta de Pie de limón y merengue fácil</Card.Title>
-          <Button variant="primary">Ver detalle</Button>
+          <Button variant="secondary">Ver detalle</Button>
         </Card.Body>
       </Card>
     </Col>
   );
 };
 
-export default CardProducto;
+export default CardReseta;
