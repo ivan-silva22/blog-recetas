@@ -1,17 +1,18 @@
 import { Nav, Container, Navbar } from "react-bootstrap";
+import {Link, NavLink} from "react-router-dom";
 
 const Menu = () => {
     return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Blog de cocina</Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'>Blog de cocina</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#">Inicio</Nav.Link>
-            <Nav.Link href="#">Registro</Nav.Link>
-            <Nav.Link href="#">Administrador</Nav.Link>
-            <Nav.Link href="#">Login</Nav.Link>
+            <NavLink end className={'nav-item nav-link'} to='/'>Inicio</NavLink>
+            <NavLink end className={'nav-item nav-link'} to='/registro'>Registro</NavLink>
+            <NavLink end className={'nav-item nav-link'} to='/administrador'>Administrador</NavLink>
+            <NavLink end className={'nav-item nav-link'} to='/login'>Login</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
