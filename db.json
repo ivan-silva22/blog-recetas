@@ -3,6 +3,6 @@
       { "id": 1, "nombreReceta": "Pizza", "descripcion": "", "categoria": "Pasta", "imagen": "https://cdn0.recetasgratis.net/es/posts/4/5/6/pie_de_limon_y_merengue_facil_44654_300_square.webp"  }
     ],
     "usuarios": [
-      { "id": 1, "nombreUsuario": "admin", "email": "admin@rollingcode.com", "password": "12345678" }
+      { "id": 1, "nombreUsuario": "admin", "email": "admin@rollingcode.com", "password": "Admin24@" }
     ]
   }
