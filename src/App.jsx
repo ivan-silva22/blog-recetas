@@ -13,7 +13,8 @@ import Registro from "./components/Registro";
 import { useState } from "react";
 
 function App() {
-  const [usuarioLogin, setUsuarioLogin] = useState({});
+  const usuario = JSON.parse(sessionStorage.getItem('usuario')) || {};
+  const [usuarioLogin, setUsuarioLogin] = useState({usuario});
   return (
     <>
       <BrowserRouter>
