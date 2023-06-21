@@ -3,14 +3,13 @@ import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Administrador from "./components/views/Administrador";
 import Inicio from "./components/views/Inicio";
 import Login from "./components/Login";
 import DetalleReseta from "./components/DetalleReseta";
-import EditarReseta from "./components/views/EditarReseta";
-import CrearReseta from "./components/views/CrearReseta";
 import Registro from "./components/Registro";
 import { useState } from "react";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdmin from "./components/routes/RutasAdmin";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem('usuario')) || {};
@@ -24,9 +23,9 @@ function App() {
         <Route exact patch="/registro" element={<Registro></Registro>}></Route>
         <Route exact path="/login" element={<Login setUsuarioLogin={setUsuarioLogin}></Login>}/>
         <Route exact path="/detallereseta" element={<DetalleReseta></DetalleReseta>}></Route>
-        <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
-        <Route exact path="/administrador/editarreseta" element={<EditarReseta></EditarReseta>}></Route>
-        <Route exact path="/administradro/crearreseta" element={<CrearReseta></CrearReseta>}></Route>
+        <Route exact path="/administrador/*" element={<RutasProtegidas>
+          <RutasAdmin></RutasAdmin>
+        </RutasProtegidas>}></Route>
 
       </Routes>
       <Footer/>
