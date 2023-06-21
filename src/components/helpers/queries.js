@@ -1,4 +1,5 @@
 const URLUsuario = import.meta.env.VITE_API_USUARIO;
+const URLReseta = import.meta.env.VITE_API_RESETA;
 
 export const login = async (usuario) =>{
     try {
