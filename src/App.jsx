@@ -10,17 +10,18 @@ import DetalleReseta from "./components/DetalleReseta";
 import EditarReseta from "./components/views/EditarReseta";
 import CrearReseta from "./components/views/CrearReseta";
 import Registro from "./components/Registro";
+import { useState } from "react";
 
 function App() {
-
+  const [usuarioLogin, setUsuarioLogin] = useState({});
   return (
     <>
       <BrowserRouter>
-      <Menu/>
+      <Menu usuarioLogin={usuarioLogin} setUsuarioLogin={setUsuarioLogin}/>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}/>
         <Route exact patch="/registro" element={<Registro></Registro>}></Route>
-        <Route exact path="/login" element={<Login></Login>}/>
+        <Route exact path="/login" element={<Login setUsuarioLogin={setUsuarioLogin}></Login>}/>
         <Route exact path="/detallereseta" element={<DetalleReseta></DetalleReseta>}></Route>
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route exact path="/administrador/editarreseta" element={<EditarReseta></EditarReseta>}></Route>
